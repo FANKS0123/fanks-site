@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台東FANKS | トップページ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Shippori Mincho B1', serif;
+      background-color: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0a2342;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .fade-in-delay {
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero {
+      background: url('https://drive.google.com/uc?export=view&id=1PEKW35V1gFzmBPTSofewjXG6NMzDPKyj') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease forwards;
+    }
+    section {
+      transform-style: preserve-3d;
+      perspective: 1200px;
+    }
+    .content {
+      padding: 2em;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      border-radius: 10px;
+      margin: 2em auto;
+      max-width: 900px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .calendar {
+      background: url('https://www.nj.com/resizer/qU5YoQSm3q3a_1vVR3FT29ZlUMM=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/UG7PYUZ5LZETLD2XJSFNSPSVMY.jpg') center/cover no-repeat;
+      padding: 2em;
+      color: #fff;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 2em auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .calendar th, .calendar td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 0.8em;
+      font-size: 0.9em;
+      height: 60px;
+      vertical-align: top;
+      word-wrap: break-word;
+      width: 14.28%;
+      color: #fff;
+    }
+    .calendar th {
+      font-weight: bold;
+      background-color: rgba(10, 35, 66, 0.8);
+    }
+    .calendar .highlight {
+      background-color: #0a2342;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .calendar .highlight:hover {
+      background-color: #143a6e;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1em;
+      margin-top: 3em;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05) rotateY(3deg);
+    }
+    @media screen and (max-width: 600px) {
+      .hero {
+        font-size: 1.8em;
+        height: 40vh;
+        padding: 1em;
+      }
+      .calendar th, .calendar td {
+        font-size: 0.75em;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="fade-in">
+    <h1>台東FANKS</h1>
+  </header>
+
+  <section class="hero fade-in">
+    台東FANKS
+  </section>
+
+  <section class="content fade-in" id="coach">
+    <h2 style="text-align: center;">監督挨拶</h2>
+    <p style="text-align: center;">台東区を代表する草野球チーム「台東FANKS」。台東区出身の現監督と友人が1980年に草野球チームを発足。その後、現在まで台東区を中心に活動を継続。</p>
+  </section>
+
+  <section class="calendar fade-in" id="schedule">
+    <h3 style="text-align: center;">2025年8月のスケジュール</h3>
+    <table>
+      <thead>
+        <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="highlight" onclick="location.href='https://fanks-form.example.com';">24<br><small>@台東リバーサイド</small></td></tr>
+        <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="content fade-in" id="history">
+    <h2 style="text-align: center;">歩み</h2>
+    <p style="text-align: center;">過去5年の試合成績、優勝成績</p>
+  </section>
+
+  <section class="content fade-in" id="gallery">
+    <h2 style="text-align: center;">ギャラリー</h2>
+    <div class="gallery">
+      <img src="https://drive.google.com/uc?export=view&id=1av6wXfpMTlk_At8JoVKXNR7GH9I7g4ix" alt="gallery1">
+      <img src="https://drive.google.com/uc?export=view&id=1hN7Mw4eix6ZE8pmOjrQTkQSmkXGZLF9f" alt="gallery2">
+      <img src="https://drive.google.com/uc?export=view&id=1zZn6OgCi91x7nKSeA5sRaBqmA6nbQ0PU" alt="gallery3">
+      <img src="https://drive.google.com/uc?export=view&id=1-IETBTnxwZGsGuN4Xy_B1tmb733Sn4dP" alt="gallery4">
+      <img src="https://drive.google.com/uc?export=view&id=19QDmVvv1W0l-79Hu9X17XzstEgIdS1ET" alt="gallery5">
+      <img src="https://drive.google.com/uc?export=view&id=1_PQ5lm9plwHEOUUppElFFug3DeKSCEZm" alt="gallery6">
+    </div>
+  </section>
+
+</body>
+</html>
