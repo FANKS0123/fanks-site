@@ -51,40 +51,46 @@
       background-size: cover;
       background-position: center;
     }
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.4);
-      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
     .hero h2 {
       position: relative;
-      color: #000;
+      z-index: 2;
+      color: white;
       text-align: center;
-      font-size: 4em;
+      font-size: 2.5em;
       font-weight: bold;
       letter-spacing: 2px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
       margin: 0;
       padding-top: 15vh;
-      z-index: 1;
     }
-    .hero img.logo {
-      display: block;
-      margin: 0 auto;
-      margin-top: 1em;
-      max-width: 250px;
-      height: auto;
-      z-index: 1;
+    .hero-logo {
       position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 1em;
+    }
+    .hero-logo img {
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      padding: 10px;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
     }
     .video-section {
       position: relative;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       overflow: hidden;
       z-index: -1;
     }
@@ -132,7 +138,7 @@
     .calendar th, .calendar td {
       border: 1px solid #ccc;
       text-align: center;
-      padding: 0.4em;
+      padding: 0.5em;
       font-size: 0.85em;
       height: 60px;
       vertical-align: top;
@@ -149,19 +155,20 @@
       color: #fff;
       font-weight: bold;
       cursor: pointer;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid white;
     }
     .calendar .highlight:hover {
       background-color: #143a6e;
     }
-    .calendar-caption {
+    .calendar-note {
       text-align: center;
-      font-size: 0.9em;
       margin-top: 1em;
+      font-size: 0.9em;
     }
-    .calendar-caption a {
+    .calendar-note a {
       color: #001f4d;
       text-decoration: underline;
+      text-decoration-color: white;
     }
     .gallery {
       display: grid;
@@ -180,69 +187,32 @@
     }
     @media screen and (max-width: 600px) {
       .hero h2 {
-        font-size: 2.5em;
+        font-size: 1.8em;
         padding-top: 10vh;
       }
       .calendar th, .calendar td {
-        font-size: 0.65em;
+        font-size: 0.75em;
         height: 50px;
       }
     }
   </style>
 </head>
 <body>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5s3LoGMibvOtqBfMiHPuhQeGIvvQkc_Vv8UJ_Ik4N88QQFQ/viewform?usp=header" class="floating-button">お問い合わせ</a>
+  <a href="#form" class="floating-button">お問い合わせ</a>
 
   <section class="hero fade-in">
     <h2>台東FUNKS</h2>
-    <img src="https://i.imgur.com/HihVtTz.jpeg" alt="ロゴ" class="logo">
+    <div class="hero-logo">
+      <img src="https://imgur.com/HihVtTz.png" alt="ロゴ">
+    </div>
   </section>
 
   <section class="video-section">
     <video autoplay muted loop playsinline>
-      <source src="https://i.imgur.com/AXf5727.mp4" type="video/mp4">
+      <source src="https://imgur.com/AXf5727.mp4" type="video/mp4">
     </video>
   </section>
 
-  <section class="content fade-in" id="coach">
-    <h2 style="text-align: center;">監督挨拶</h2>
-    <p style="text-align: center;">台東区を代表する草野球チーム「台東FUNKS」。台東区出身の現監督と友人が1980年に草野球チームを発足。その後、現在まで台東区を中心に活動を継続。</p>
-  </section>
-
-  <section class="calendar fade-in" id="schedule">
-    <h3 style="text-align: center; color: #001f4d;">2025年8月のスケジュール</h3>
-    <table>
-      <thead>
-        <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
-      </thead>
-      <tbody>
-        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
-        <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="highlight" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfCbZQbkHtvZQBgChiSc9Ii4GEOi8MR_O5OJXbnpSbte7xdRg/viewform?usp=header')">24<br><small>12:00〜<br>台東</small></td></tr>
-        <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
-      </tbody>
-    </table>
-    <div class="calendar-caption">
-      台東：<a href="https://www.taitogeibun.net/riverside/" target="_blank">台東リバーサイドスポーツセンター</a>
-    </div>
-  </section>
-
-  <section class="content fade-in" id="history">
-    <h2 style="text-align: center;">歩み</h2>
-    <p style="text-align: center;">過去5年の試合成績、優勝成績</p>
-  </section>
-
-  <section class="content fade-in" id="gallery">
-    <h2 style="text-align: center;">ギャラリー</h2>
-    <div class="gallery">
-      <img src="https://i.imgur.com/HidWYce.jpeg" alt="gallery2">
-    </div>
-  </section>
-
-  <section class="content fade-in" id="form">
-    <h2 style="text-align: center;">体験申し込みフォーム</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5s3LoGMibvOtqBfMiHPuhQeGIvvQkc_Vv8UJ_Ik4N88QQFQ/viewform?usp=header" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-  </section>
+  <!-- 他のセクションはここに続く -->
 </body>
 </html>
