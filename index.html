@@ -29,6 +29,9 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+    .floating-button::after {
+      content: '体験申込';
+    }
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -69,7 +72,7 @@
       position: relative;
       color: white;
       text-align: center;
-      font-size: 5em;
+      font-size: 6em;
       font-weight: bold;
       letter-spacing: 2px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -82,7 +85,7 @@
       margin-top: 1em;
     }
     .hero .logo img {
-      height: 240px;
+      height: 280px;
       width: auto;
     }
     section {
@@ -103,6 +106,9 @@
       padding: 2em;
       max-width: 900px;
       margin: auto;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-radius: 10px;
     }
     .calendar table {
       width: 100%;
@@ -114,7 +120,8 @@
       border: 1px solid #ddd;
     }
     .calendar .highlight {
-      background-color: #ffffcc;
+      background-color: #0a2342;
+      color: white;
       cursor: pointer;
       text-decoration: underline;
     }
@@ -122,10 +129,22 @@
       margin-top: 1em;
       text-align: center;
     }
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1em;
+      padding: 1em;
+    }
+    .gallery img {
+      height: 200px;
+      width: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
-  <a href="#form" class="floating-button">お問い合わせ</a>
+  <a href="https://forms.gle/5coaVSsQVyQwvQ6e7" class="floating-button"></a>
 
   <section class="hero fade-in">
     <h2>台東FUNKS</h2>
@@ -149,7 +168,7 @@
         <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
         <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
         <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="highlight" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfCbZQbkHtvZQBgChiSc9Ii4GEOi8MR_O5OJXbnpSbte7xdRg/viewform?usp=header')">24<br><small>12:00〜<br>台東</small></td></tr>
+        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="highlight" onclick="window.open('https://forms.gle/5coaVSsQVyQwvQ6e7')">24<br><small>12:00〜<br>台東</small></td></tr>
         <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
       </tbody>
     </table>
@@ -171,7 +190,7 @@
   </section>
 
   <section class="content fade-in" id="form">
-    <h2 style="text-align: center;">体験申し込みフォーム</h2>
+    <h2 style="text-align: center;">お問合せ</h2>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5s3LoGMibvOtqBfMiHPuhQeGIvvQkc_Vv8UJ_Ik4N88QQFQ/viewform?usp=header" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
   </section>
 </body>
