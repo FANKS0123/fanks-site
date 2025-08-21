@@ -69,7 +69,7 @@
       position: relative;
       color: white;
       text-align: center;
-      font-size: 4em;
+      font-size: 5em;
       font-weight: bold;
       letter-spacing: 2px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -82,7 +82,7 @@
       margin-top: 1em;
     }
     .hero .logo img {
-      height: 180px;
+      height: 240px;
       width: auto;
     }
     section {
@@ -99,6 +99,29 @@
       max-width: 900px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
+    .calendar {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .calendar th, .calendar td {
+      padding: 0.5em;
+      border: 1px solid #ddd;
+    }
+    .calendar .highlight {
+      background-color: #ffffcc;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .calendar-caption {
+      margin-top: 1em;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -111,6 +134,45 @@
     </div>
   </section>
 
-  <!-- 以下、監督挨拶以降のセクションを復旧してください -->
+  <section class="content fade-in" id="coach">
+    <h2 style="text-align: center;">監督挨拶</h2>
+    <p style="text-align: center;">台東区を代表する草野球チーム「台東FUNKS」。台東区出身の現監督と友人が1980年に草野球チームを発足。その後、現在まで台東区を中心に活動を継続。</p>
+  </section>
+
+  <section class="calendar fade-in" id="schedule">
+    <h3 style="text-align: center; color: #001f4d;">2025年8月のスケジュール</h3>
+    <table>
+      <thead>
+        <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+        <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="highlight" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfCbZQbkHtvZQBgChiSc9Ii4GEOi8MR_O5OJXbnpSbte7xdRg/viewform?usp=header')">24<br><small>12:00〜<br>台東</small></td></tr>
+        <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+      </tbody>
+    </table>
+    <div class="calendar-caption">
+      台東：<a href="https://www.taitogeibun.net/riverside/" target="_blank">台東リバーサイドスポーツセンター</a>
+    </div>
+  </section>
+
+  <section class="content fade-in" id="history">
+    <h2 style="text-align: center;">歩み</h2>
+    <p style="text-align: center;">過去5年の試合成績、優勝成績</p>
+  </section>
+
+  <section class="content fade-in" id="gallery">
+    <h2 style="text-align: center;">ギャラリー</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/HidWYce.jpeg" alt="gallery2">
+    </div>
+  </section>
+
+  <section class="content fade-in" id="form">
+    <h2 style="text-align: center;">体験申し込みフォーム</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5s3LoGMibvOtqBfMiHPuhQeGIvvQkc_Vv8UJ_Ik4N88QQFQ/viewform?usp=header" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  </section>
 </body>
 </html>
