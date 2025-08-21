@@ -69,7 +69,7 @@
       position: relative;
       color: white;
       text-align: center;
-      font-size: 3em;
+      font-size: 3.5em;
       font-weight: bold;
       letter-spacing: 2px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
@@ -80,29 +80,10 @@
       position: relative;
       z-index: 2;
       margin-top: 1em;
-      background: rgba(255,255,255,0.8);
-      border-radius: 50%;
-      padding: 10px;
     }
     .hero .logo img {
-      height: 100px;
+      height: 140px;
       width: auto;
-    }
-    .video-section {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
-    }
-    .video-section video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
     }
     section {
       position: relative;
@@ -118,7 +99,6 @@
       max-width: 900px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
-    /* ... 省略：他のスタイルはそのまま維持 ... */
   </style>
 </head>
 <body>
@@ -129,12 +109,6 @@
     <div class="logo">
       <img src="https://i.imgur.com/h48nGCF.png" alt="ロゴ">
     </div>
-  </section>
-
-  <section class="video-section">
-    <video autoplay muted loop playsinline>
-      <source src="https://imgur.com/AXf5727.mp4" type="video/mp4">
-    </video>
   </section>
 
   <!-- 以下、監督挨拶以降はそのまま維持 -->
