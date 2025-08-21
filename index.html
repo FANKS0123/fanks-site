@@ -46,21 +46,38 @@
     .hero {
       position: relative;
       height: 60vh;
-      overflow: hidden;
       background-image: url('https://i.imgur.com/uIFDg98.jpeg');
       background-size: cover;
       background-position: center;
+      overflow: hidden;
     }
-    .hero h2 {
-      position: relative;
-      color: white;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      z-index: 2;
+    }
+    .hero-content img {
+      max-width: 180px;
+      margin-bottom: 1em;
+    }
+    .hero-content h2 {
+      color: white;
       font-size: 3em;
       font-weight: bold;
-      letter-spacing: 2px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      margin: 0;
-      padding-top: 20vh;
     }
     .video-section {
       position: relative;
@@ -150,9 +167,8 @@
       transform: scale(1.05) rotateY(3deg);
     }
     @media screen and (max-width: 600px) {
-      .hero h2 {
+      .hero-content h2 {
         font-size: 1.8em;
-        padding-top: 10vh;
       }
       .calendar th, .calendar td {
         font-size: 0.75em;
@@ -165,7 +181,10 @@
   <a href="#form" class="floating-button">お問い合わせ</a>
 
   <section class="hero fade-in">
-    <h2>台東FUNKS</h2>
+    <div class="hero-content">
+      <img src="https://i.imgur.com/30JqTRk.png" alt="FUNKS ロゴ">
+      <h2>台東FUNKS</h2>
+    </div>
   </section>
 
   <section class="video-section">
