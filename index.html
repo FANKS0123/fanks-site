@@ -122,6 +122,7 @@
       width: 100%;
       border-collapse: collapse;
       text-align: center;
+      table-layout: fixed;
     }
     .calendar th, .calendar td {
       height: 80px;
@@ -152,6 +153,11 @@
       flex-shrink: 0;
     }
   </style>
+  <script>
+    window.addEventListener('load', () => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  </script>
 </head>
 <body>
   <a href="https://forms.gle/5coaVSsQVyQwvQ6e7" class="floating-button"></a>
