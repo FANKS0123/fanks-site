@@ -73,7 +73,7 @@
       color: white;
       text-align: center;
       font-family: 'Noto Serif JP', serif;
-      font-size: 7em;
+      font-size: 6em;
       font-weight: 700;
       letter-spacing: 6px;
       text-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -84,7 +84,7 @@
     .hero .logo {
       position: relative;
       z-index: 2;
-      margin-top: 2em; /* 画像を少し下げて余白を作る */
+      margin-top: 2.5em; /* さらに余白を開ける */
       animation: fadeInUp 1.5s ease forwards;
     }
     .hero .logo img {
@@ -94,14 +94,17 @@
     }
     @media (max-width: 768px) {
       .hero h2 {
-        font-size: 3em;
+        font-size: 2.2em; /* スマホ用にさらに小さめ */
         letter-spacing: 2px;
       }
       .hero .logo img {
-        height: 150px;
+        height: 120px;
       }
       .content p {
-        font-size: 0.9em; /* 携帯用で文字を小さく */
+        font-size: 0.75em; /* 携帯用で文字をさらに小さく */
+        line-height: 1.6em;
+        max-width: 25ch; /* 1行25文字に制御 */
+        margin: auto;
       }
     }
     section {
