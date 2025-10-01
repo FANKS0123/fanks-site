@@ -36,18 +36,6 @@
       opacity: 0;
       animation: fadeInUp 1s ease forwards;
     }
-    .fade-in h2,
-    .fade-in .logo {
-      opacity: 0;
-      transform: translateY(30px) scale(0.9);
-      animation: fadeInUp 1.2s ease forwards;
-    }
-    .fade-in h2 {
-      animation-delay: 0.2s;
-    }
-    .fade-in .logo {
-      animation-delay: 0.5s;
-    }
     @keyframes fadeInUp {
       to {
         opacity: 1;
@@ -81,10 +69,10 @@
       color: white;
       text-align: center;
       font-family: 'Noto Serif JP', serif;
-      font-size: 9em;
+      font-size: 7em;
       font-weight: 700;
-      letter-spacing: 8px;
-      text-shadow: 8px 8px 25px rgba(0,0,0,0.9);
+      letter-spacing: 6px;
+      text-shadow: 5px 5px 15px rgba(0,0,0,0.9);
       margin: 0;
       z-index: 2;
     }
@@ -94,15 +82,22 @@
       margin-top: 1em;
     }
     .hero .logo img {
-      height: 500px;
+      height: 300px;
       width: auto;
-      filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.9));
+      filter: drop-shadow(8px 8px 20px rgba(0,0,0,0.8));
+    }
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 4em;
+        letter-spacing: 3px;
+      }
+      .hero .logo img {
+        height: 180px;
+      }
     }
     section {
       position: relative;
       z-index: 1;
-      transform-style: preserve-3d;
-      perspective: 1200px;
     }
     .content {
       padding: 2em;
@@ -112,7 +107,11 @@
       max-width: 900px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
       font-family: 'Shippori Mincho B1', serif;
-      font-size: 1.3em;
+      font-size: 1.1em;
+    }
+    .content h2 {
+      font-size: 2em;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
     }
     .calendar {
       padding: 2em;
@@ -158,12 +157,11 @@
       flex-shrink: 0;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
+    .history-text {
+      font-size: 1em;
+      line-height: 1.8em;
+    }
   </style>
-  <script>
-    window.addEventListener('load', () => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    });
-  </script>
 </head>
 <body>
   <a href="https://forms.gle/5coaVSsQVyQwvQ6e7" class="floating-button"></a>
@@ -178,12 +176,18 @@
   <section class="content fade-in" id="coach">
     <h2 style="text-align: center;">監督挨拶</h2>
     <p style="text-align: center;">
-      台東FUNKSのホームページをご覧いただき、誠にありがとうございます。<br>
-      私たち台東FUNKSは、1980年代から活動を続けている草野球チームで、台東区を拠点に、地元の大会や練習試合などを通して、野球を通じた交流と成長を楽しんでまいりました。<br>
-      これまでには台東区の大会で幾度も優勝を経験するなど、歴史ある戦績もチームの誇りです。<br>
+      台東FUNKSのホームページをご覧いただき、<br>
+      誠にありがとうございます。<br><br>
+      私たち台東FUNKSは、<br>
+      1980年代から活動を続けている草野球チームで、<br>
+      台東区を拠点に地元の大会や練習試合などを通して、<br>
+      野球を通じた交流と成長を楽しんでまいりました。<br><br>
       現在のメンバーは20代から60代までと幅広く、<br>
-      野球に興味がある方、体を動かしたい方、地域の仲間とつながりたい方、どんな方でも大歓迎です。<br>
-      見学や体験参加も随時受け付けておりますので、ぜひお気軽にお問い合わせください。
+      野球に興味がある方、<br>
+      地域の仲間とつながりたい方、<br>
+      どんな方でも大歓迎です。<br><br>
+      見学や体験参加も随時受け付けておりますので、<br>
+      ぜひお気軽にお問い合わせください。
     </p>
   </section>
 
@@ -208,7 +212,7 @@
 
   <section class="content fade-in" id="history">
     <h2 style="text-align: center;">歩み</h2>
-    <ul style="text-align: center; list-style: none; padding: 0;">
+    <ul class="history-text" style="text-align: center; list-style: none; padding: 0;">
       <li>1987年10月　台東区秋季大会3部　優勝</li>
       <li>1987年 7月　台東区秋季大会3部　優勝</li>
       <li>1987年 9月　台東区夏季大会3部　優勝</li>
