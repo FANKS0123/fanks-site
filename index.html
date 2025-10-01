@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>台東FUNKS | トップページ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
     body {
       margin: 0;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Shippori Mincho B1', serif;
       background-color: #f4f4f4;
       color: #333;
       overflow-x: hidden;
@@ -39,8 +39,8 @@
     .fade-in h2,
     .fade-in .logo {
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease forwards;
+      transform: translateY(30px) scale(0.9);
+      animation: fadeInUp 1.2s ease forwards;
     }
     .fade-in h2 {
       animation-delay: 0.2s;
@@ -51,14 +51,14 @@
     @keyframes fadeInUp {
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
       }
     }
     .hero {
       position: relative;
       height: 100vh;
       overflow: hidden;
-      background-image: url('https://imgur.com/uIFDg98.jpg');
+      background-image: url('https://i.imgur.com/uIFDg98.jpeg');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -80,11 +80,11 @@
       position: relative;
       color: white;
       text-align: center;
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1em;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 9em;
+      font-weight: 700;
+      letter-spacing: 8px;
+      text-shadow: 8px 8px 25px rgba(0,0,0,0.9);
       margin: 0;
       z-index: 2;
     }
@@ -94,8 +94,9 @@
       margin-top: 1em;
     }
     .hero .logo img {
-      height: 200px;
+      height: 500px;
       width: auto;
+      filter: drop-shadow(10px 10px 25px rgba(0,0,0,0.9));
     }
     section {
       position: relative;
@@ -105,19 +106,22 @@
     }
     .content {
       padding: 2em;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       margin: 2em auto;
       max-width: 900px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      font-family: 'Shippori Mincho B1', serif;
+      font-size: 1.3em;
     }
     .calendar {
       padding: 2em;
       max-width: 900px;
       margin: auto;
       background: white;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
       border-radius: 10px;
+      font-family: 'Shippori Mincho B1', serif;
     }
     .calendar table {
       width: 100%;
@@ -152,6 +156,7 @@
       width: auto;
       border-radius: 8px;
       flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
   <script>
@@ -161,6 +166,74 @@
   </script>
 </head>
 <body>
-  <!-- body unchanged -->
+  <a href="https://forms.gle/5coaVSsQVyQwvQ6e7" class="floating-button"></a>
+
+  <section class="hero fade-in">
+    <h2>台東FUNKS</h2>
+    <div class="logo">
+      <img src="https://i.imgur.com/ZM5r01q.jpg" alt="ロゴ">
+    </div>
+  </section>
+
+  <section class="content fade-in" id="coach">
+    <h2 style="text-align: center;">監督挨拶</h2>
+    <p style="text-align: center;">
+      台東FUNKSのホームページをご覧いただき、誠にありがとうございます。<br>
+      私たち台東FUNKSは、1980年代から活動を続けている草野球チームで、台東区を拠点に、地元の大会や練習試合などを通して、野球を通じた交流と成長を楽しんでまいりました。<br>
+      これまでには台東区の大会で幾度も優勝を経験するなど、歴史ある戦績もチームの誇りです。<br>
+      現在のメンバーは20代から60代までと幅広く、<br>
+      野球に興味がある方、体を動かしたい方、地域の仲間とつながりたい方、どんな方でも大歓迎です。<br>
+      見学や体験参加も随時受け付けておりますので、ぜひお気軽にお問い合わせください。
+    </p>
+  </section>
+
+  <section class="calendar fade-in" id="schedule">
+    <h3 style="text-align: center; color: #001f4d;">2025年10月のスケジュール</h3>
+    <table>
+      <thead>
+        <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td class="highlight" onclick="window.open('https://forms.gle/5coaVSsQVyQwvQ6e7')">5<br><small>10:00〜<br>台東</small></td></tr>
+        <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td class="highlight" onclick="window.open('https://forms.gle/5coaVSsQVyQwvQ6e7')">12<br><small>10:00〜<br>台東</small></td></tr>
+        <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+        <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+        <tr><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="calendar-caption">
+      台東：<a href="https://www.taitogeibun.net/riverside/" target="_blank">台東リバーサイドスポーツセンター</a>
+    </div>
+  </section>
+
+  <section class="content fade-in" id="history">
+    <h2 style="text-align: center;">歩み</h2>
+    <ul style="text-align: center; list-style: none; padding: 0;">
+      <li>1987年10月　台東区秋季大会3部　優勝</li>
+      <li>1987年 7月　台東区秋季大会3部　優勝</li>
+      <li>1987年 9月　台東区夏季大会3部　優勝</li>
+      <li>2010年 9月　台東区夏季大会2部　優勝</li>
+    </ul>
+  </section>
+
+  <section class="content fade-in" id="gallery">
+    <h2 style="text-align: center;">ギャラリー</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/HidWYce.jpeg" alt="gallery1">
+      <img src="https://imgur.com/dUqfXxQ.jpg" alt="gallery2">
+      <img src="https://imgur.com/5FG4olb.jpg" alt="gallery3">
+      <img src="https://imgur.com/CLRBcX5.jpg" alt="gallery4">
+      <img src="https://i.imgur.com/p7hSzHH.jpg" alt="gallery5">
+      <img src="https://imgur.com/acwhX6a.jpg" alt="gallery6">
+      <img src="https://imgur.com/q45r5hd.jpg" alt="gallery7">
+      <img src="https://imgur.com/4QGZahT.jpg" alt="gallery8">
+      <img src="https://imgur.com/ReYoyQ0.jpg" alt="gallery9">
+    </div>
+  </section>
+
+  <section class="content fade-in" id="form">
+    <h2 style="text-align: center;">お問合せ</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5s3LoGMibvOtqBfMiHPuhQeGIvvQkc_Vv8UJ_Ik4N88QQFQ/viewform?usp=header" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+  </section>
 </body>
 </html>
