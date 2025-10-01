@@ -37,7 +37,11 @@
       animation: fadeInUp 1s ease forwards;
     }
     @keyframes fadeInUp {
-      to {
+      0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+      }
+      100% {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
@@ -75,11 +79,13 @@
       text-shadow: 5px 5px 15px rgba(0,0,0,0.9);
       margin: 0;
       z-index: 2;
+      animation: fadeInUp 1.2s ease forwards;
     }
     .hero .logo {
       position: relative;
       z-index: 2;
-      margin-top: 1em;
+      margin-top: 2em; /* 画像を少し下げて余白を作る */
+      animation: fadeInUp 1.5s ease forwards;
     }
     .hero .logo img {
       height: 300px;
@@ -88,11 +94,14 @@
     }
     @media (max-width: 768px) {
       .hero h2 {
-        font-size: 4em;
-        letter-spacing: 3px;
+        font-size: 3em;
+        letter-spacing: 2px;
       }
       .hero .logo img {
-        height: 180px;
+        height: 150px;
+      }
+      .content p {
+        font-size: 0.9em; /* 携帯用で文字を小さく */
       }
     }
     section {
@@ -166,7 +175,7 @@
 <body>
   <a href="https://forms.gle/5coaVSsQVyQwvQ6e7" class="floating-button"></a>
 
-  <section class="hero fade-in">
+  <section class="hero">
     <h2>台東FUNKS</h2>
     <div class="logo">
       <img src="https://i.imgur.com/ZM5r01q.jpg" alt="ロゴ">
